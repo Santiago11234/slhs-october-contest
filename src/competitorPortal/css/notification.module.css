@@ -1,0 +1,54 @@
+.notieBody {
+    width: 20%;
+    height: 10%;
+    top: 7px;
+    right: 7px;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  
+  .notieTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .notieContent {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .notieBar {
+    width: 90%;
+    margin-left: 5%;
+    height: 4px;
+    background-color: aliceblue;
+    border-radius: 10px;
+  }
+  
+  .notieDone {
+    width: 0%;
+    height: 100%;
+    background-color: #00b300;
+    border-radius: 10px;
+    animation: notieDoneAnimation 10s ease-in-out;
+  }
+  
+  @keyframes notieDoneAnimation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  

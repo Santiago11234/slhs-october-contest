@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+  }
+
+  @keyframes fadeinTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    padding-top: 16px;
+    animation: fadeinTop 1s;
+  }
+  
+  .nav svg {
+    fill: white;
+  }
+
+  .logo {
+    color: white;
+    aspect-ratio: 1;
+    width: 8%;
+  }
+  
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 30px;
+  } 
+  
+  .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-right: 20px;
+    padding: 20px;
+    cursor: pointer;
+  }
+    
+  .gridContainer {
+    min-height: 80vh;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    box-sizing: border-box;
+    animation: fadeinTop 1s;
+  }
+
+
+ /* Mobile CRAP */
+ .mobileMenuIcon {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh; 
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.mobileMenuOpen {  
+  transform: translateY(0);
+}
+
+.mobileMenuItem {
+  display: block;
+  padding: 16px;
+  text-align: center;
+  color: white; 
+  text-decoration: none;
+  transition: background-color 0.3s, text-decoration 0.3s; 
+}
+
+
+.mobileMenuItem:hover {
+  text-decoration: underline;
+  background-color: #444; 
+  cursor: pointer;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .entireBody {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainLoginPage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+
+/* login form*/
+.loginForm {
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+  }
+  
+  .loginForm h1 {
+    margin-bottom: 1rem;
+    color: white;
+    font-size: xx-large;
+  }
+
+  .loginForm h4 {
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .formGroup {
+    margin: 0.8rem;
+    display: flex;
+    align-items: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .formGroup input {
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  
+  .loginButton {
+    background-color: #f77c00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .loginButton:hover {
+    background-color: #e27202;
+  }
+
+
+  /* mobile optimization */
+
+@media (max-width: 768px) {
+  .entireBody {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .loginForm {
+    width: 100%; 
+  }
+}
+
+
+/* noties */
+.notificationCircle {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  position: sticky;
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: absolute;
+  margin-top: 12px;
+  margin-right: 10px;
+  right: 5px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  gap: 10px;
+}
+
+.modalTitle {
+  margin-bottom: 0.5rem;
+}
+
+.modalBtn {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  border: none;
+}
+
+.modalBtnYes {
+  background-color: #4299e1;
+  color: white;
+}
+
+.modalBtnYes:hover {
+  background-color: #2b6cb0;
+}
+
+.modalBtnNo {
+  background-color: #cbd5e0;
+  color: #4a5568;
+}
+
+.modalBtnNo:hover {
+  background-color: #a0aec0;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

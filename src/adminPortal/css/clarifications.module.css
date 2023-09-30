@@ -1,0 +1,125 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .modal-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ask-question-button {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+    width: 80%;
+  }
+
+  .clarifications-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 3%
+  }
+  .announcements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 1%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .question-card {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
+    flex-basis: calc(80%); 
+  }
+  
+  .question-section, .answer-section {
+    margin-bottom: 10px;
+  }
+  
+  .question-card h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .question-card p {
+    margin: 0;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .newQuestions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;;
+  }
+
+  .newQuestions h3 {
+    color: white;
+    margin-left: 10%;
+
+  }
+
+  .cardInside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .respond-question-button {
+    background-color: #0a9e62; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

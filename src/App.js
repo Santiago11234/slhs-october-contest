@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CompetitorPage from "./Pages/CompetitorPage";
+import LoginPage from "./Pages/loginPage";
+import AdminPage from "./Pages/adminPage";
+
+import "./App.css"; 
+
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(0);
+
+  function handleLogin ( password) {
+    if(password === "admin") {
+      setIsLoggedIn(2);
+      return;
+    }
+    setIsLoggedIn(1);
+    console.log(isLoggedIn)
+    console.log("home")
+  };
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename="/">
+        <Routes>
+          {isLoggedIn === 1 ? (
+            <Route
+              path=""
+              element={
+                <CompetitorPage />
+              }
+            />
+          ) : isLoggedIn === 0 ? (
+            <Route path="" element={<LoginPage goToHomeFunction={handleLogin}/>} />
+          ) :
+          (
+            <Route path="" element={<AdminPage />} />
+          )
+        }
+         
+        </Routes>
+    </Router>
   );
 }
 
